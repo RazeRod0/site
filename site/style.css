@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffd700;
+    padding: 20px;
+}
+
+#logo img.logo{
+    width: 100px;
+    height: auto; }
+
+
+#logo::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -40px; /* Ajustez en fonction de la largeur de votre barre */
+    top: 50%;
+    transform: translateY(-50%); /* Centrer verticalement la barre */
+    height: 20px; /* Hauteur de la barre */
+    width: 2px;
+    background-color: black; /* La couleur de la barre */
+}
+
+nav ul {
+    display: flex;
+    margin-right: 20px;
+}
+
+nav li {
+    margin: 0 50px;
+}
+
+nav a {
+    color: black;
+    font-size: 16px;
+}
+
+#search {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+.search-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('chemin/vers/votre-icone-recherche.png');
+    background-size: cover;
+    cursor: pointer;
+}
+
+/* Style pour la section promotionnelle */
+#feature {
+    background-color: yellow;
+    display: flex;
+    justify-content: center; /* Centrer le contenu horizontalement */
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+    width: 80%;
+}
+
+#feature .text-container {
+    text-align: left;
+    margin-right: 20px; /* Espace entre le texte et l'image du burger */
+}
+
+#feature .burger-image img {
+    width: auto; /* Laisser la largeur se définir automatiquement */
+    height: 300px; /* Définir une hauteur fixe pour l'image du burger */
+    margin-left: 20px; /* Espace à gauche de l'image */
+}
+
+/* Media query pour ajuster la mise en page sur les petits écrans */
+@media (max-width: 768px) {
+    #navbar { 
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+#logo::before {
+    display: none;  /* Enlever la barre avant le logo sur les petits écrans */
+}
+
+#search {
+    margin-top: 10px; /* Ajouter de l'espace au-dessus de la barre de recherche sur les petits écrans */
+}
+
+#feature {
+    flex-direction: column; /* Empiler verticalement le texte et l'image sur les petits écrans */
+    padding: 20px;
+}
+
+#feature .text-container, #feature .burger-image img {
+    margin-left: 0; /* Enlever l'espace à gauche sur les petits écrans */
+    margin-right: 0; /* Enlever l'espace à droite sur les petits écrans */
+    text-align: center; /* Centrer le texte sur les petits écrans */
+}
+
+#feature .burger-image img {
+    height: 200px; /* Ajuster la taille de l'image du burger sur les petits écrans */
+    margin-top: 20px; /* Ajouter de l'espace au-dessus de l'image sur les petits écrans */
+} }
+
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Empile les éléments verticalement */
+    text-align: center; /* Centre le texte à l'intérieur du conteneur */
+    margin: auto; /* Centre le conteneur sur la page */
+    padding: 20px; /* Ajoute un espacement à l'intérieur du conteneur */
+    width: 100%; /* Utilisez 100% de la largeur disponible ou ajustez selon vos besoins */
+    max-width: 1200px; /* Ajustez cette valeur en fonction de la largeur maximale souhaitée */
+}
+
+/* Vous pouvez également vouloir ajouter une media query pour adapter la mise en page sur les petits écrans */
+@media (max-width: 768px) {
+    .centered-container {
+        flex-direction: column;
+        width: 90%; /* Ajustez la largeur pour les petits écrans */
+    }
+}
+#carouselExampleControls{
+  width:50%;
+  margin:auto;
+  background-color: #ffd700;
+  border-radius: 15px;
+  overflow: hidden;
+  top:100px;
+}
+.carousel-item img{
+  width:100%;
+  height:auto;
+}
+
+.carousel-indicators {
+  bottom: 10px; /* Ajuster la position des indicateurs au bas du carousel */
+}
+
+.carousel-control-prev, .carousel-control-next {
+  border-radius: 10px; /* Arrondir les coins des boutons de contrôle */
+  color:red;
+}
+
+.carousel-inner {
+  border-radius: 15px; /* Arrondir les coins du contenu du carousel */
+  overflow: hidden; /* Assurer que le fond arrondi est appliqué correctement */
+}
+
+.carousel-item {
+  border-radius: 15px; /* Arrondir les coins de chaque diapositive du carousel */
+  overflow: hidden; /* Assurer que le fond arrondi est appliqué correctement */
+}
